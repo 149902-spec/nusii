@@ -1,0 +1,127 @@
+:root {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --card: #1c1c1c;
+  --accent: #4f9cff;
+}
+
+body.light {
+  --bg: #f5f5f5;
+  --text: #111;
+  --card: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* ICONS */
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* MENU */
+nav {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: 0.3s;
+}
+
+nav.open {
+  right: 0;
+}
+
+nav a {
+  padding: 15px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* CONTENT */
+.container {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fade 0.5s ease;
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* ANIMATION */
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

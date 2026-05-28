@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">⚡ MySite</div>
+
+  <div>
+    <span class="icon" onclick="toggleTheme()">🌙</span>
+    <span class="icon" onclick="toggleMenu()">☰</span>
+  </div>
+</header>
+
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">Over mij</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h1>📞 Contact</h1>
+
+  <div class="card">
+    <form onsubmit="alert('Bericht verzonden!'); return false;">
+      <input type="text" placeholder="Naam" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Jouw bericht" rows="5"></textarea>
+      <button type="submit">Verstuur</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
